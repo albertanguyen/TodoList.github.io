@@ -1,58 +1,63 @@
-/* */
-
 let masterTodoList = []
 
-const clearTodoInput = () => document.getElementById('userInput').value = ''
-const clearOldTodoLists = () => document.getElementById('todoList').innerHTML = ''
-
-const addTodoToList = () => {
-    const newTodo = {
+/* Get Input*/
+const AddTodo = () => {
+    const Todoitem = {
+        createAt: new Date(),
         isDone: false,
-        createdAt: new Date(),
-        body: document.getElementById('userInput').value
-    }
-    masterTodoList.push(newTodo)
-}
-
-const renderTodoLists = () => {
-    if (masterTodoList.length === 0) document.getElementById('todoList').innerHTML = ''
-    let html = ''
-    // element.body get the todo information from body attribute within each element
-    // masterTodoList[idx] get the object element only
-    // element.body = masterTodoList[idx].body
-    masterTodoList.map((element, idx) => {
-        const textnode = `<li>${element.body} <a href='#' onclick='removeTodoItem(${idx})'>x</a></li>\n`;
-        //    const textnode = `<li>${element.body} <a href='#' onclick='removeTodoItem(${idx})'>x</a></li>\n`;  
-        const node = html += textnode // asign html updated by textnode to node
-        //    const node += textnode; 
-        //     html += textnode
-        document.getElementById('todoList').innerHTML = node
-        //    console.log(textnode);    
-    })
-    console.log(html);
-}
-
-const removeTodoItem = selectedTodoIdx => {
-    masterTodoList = masterTodoList.filter((_, idx) => idx !== selectedTodoIdx);
-    //  renderTodoLists()
-}
-
-const onClickTitle = () => updateTitle()
-
-const updateTitle = () => {
-    document.getElementById('titleContainer').innerHTML = ''
-    document.getElementById("titleContainer").innerHTML = `<input id="todoTitle"></input>`
-    document.getElementById('todoTitle').focus()
-    //  let newtitle = document.getElementById('todoTitle').value
-    //document.getElementById('todoTitle').innerText = 
+        content: document.getElementById('UserInput').value
+    };
+    masterTodoList.push(Todoitem);
+    saveTodoList(masterTodoList)
 }
 
 
-//const Completed = array => array.filter(element => element.isDone)   
+const clearUserInput = () => document.getElementById('UserInput').value = ''
+const clearOldTodoLists = () => document.getElementById("UserTodoList").innerHTML = ''
+const TodoList = () => JSON.parse(localStorage.getItem('UserTodoList'))
+const saveTodoList = TodoList => localStorage.setItem('UserTodoList', JSON.stringify(TodoList))
 
-const onButtonClick = () => {
-    clearOldTodoLists()
-    addTodoToList()
-    clearTodoInput()
-    renderTodoLists()
+
+const TodoListRender = () => {
+    if (masterTodoList.length === 0) document.getElementById('UserTodoList').innerHTML = ''
+    let html = '';
+    masterTodoList.map( (element,idx) => {
+        const htmlnode = `<li class='text-left'><a href='#' onclick='removeTodoItem(${idx})' style='color: #F2A900;'>${
+          element.content
+        }</a></li>\n`; 
+        const jsnode = html += htmlnode; 
+        document.getElementById("UserTodoList").innerHTML = jsnode;
+    });
 }
+
+const removeTodoItem = selectedItemIdx => {
+    masterTodoList = masterTodoList.filter( (_, idx) => idx !== selectedItemIdx)
+    TodoListRender()
+}
+
+
+function validate(e) {
+  var text = e.target.value;
+  document.getElementById("titleContainer").innerHTML = text;
+}
+
+const ChangeTitle = () => {
+    document.getElementById("titleContainer").innerHTML = "";
+    document.getElementById("titleContainer").innerHTML = `<input id="todoTitle"></input>`;
+    document.getElementById("todoTitle").focus();
+    const todotitle  = document.getElementById("todoTitle");
+    todotitle.addEventListener("keydown", function(e) {
+      if (e.keyCode === 13) {
+        validate(e);
+      }
+    });
+};
+
+
+const main = () => {
+  clearOldTodoLists();
+  AddTodo();
+  clearUserInput();
+  TodoListRender();
+};
+
