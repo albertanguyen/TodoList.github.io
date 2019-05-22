@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 
 <head>
@@ -12,59 +13,114 @@
         rel="stylesheet" />
     <!--Import social icons font-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <!--Import font family-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
 
     <!--Import customized stylesheet-->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/lets_go.png" type="image/x-icon" />
+    <link rel="icon" href="img/logo-removebg.png" type="image/x-icon" />
+
     <title>Todo List</title>
 </head>
 
 <body>
-    <div class="h-100">
-        <div class="row h-100">
-            <div class="d-flex col flex-column my-auto" style="height: 100%">
-                <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
-                    <div id="titleContainer">
-                        <!-- <h1 onclick="onClickTitle()" id="todoTitle">Todo List</h1> -->
-                        <h1 onclick="updateTitle()" id="todoTitle">Todo List</h1>
-                    </div>
-                    <ul id="todoList">
-                    </ul>
+    <header class="text-center mx-auto mt-5 py-5">
+        <h1 class="text-uppercase" style="font-family: Oswald;">LIFE IS
+            <span style="color: #F2A900;">SHORT</span></h1>
+        <h2 id="titleContainer" onclick="ChangeTitle()">User's Todo List</h2>
+        <!-- Coded with love by Mutiullah Samim, modified with love by me. Thank you so much!!!-->
+        <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+                <div class="searchbar">
+                    <input class="search_input" type="text" placeholder="Life is short..." id="UserInput">
+                    <a href="#" class="add_icon" onclick="main()"><i class="fa fa-plus-circle"></i></a>
                 </div>
             </div>
-
-            <div class="d-flex col flex-column my-auto justify-content-center align-items-center">
-                <input id="userInput" style="margin-bottom: 10px">
-                <button onclick="onButtonClick()">Add Todo</button>
-            </div>
-
-            <div class="d-flex col flex-column my-auto justify-content-center align-items-center"
-                style="height: 100%; padding: 0">
-                <div class="d-flex col flex-column my-auto justify-content-center align-items-center row"
-                    style="height: 50%">
-                    <h1>Stale</h1>
-                    <ul id="todoList">
-                        <li>Write Code</li>
-                        <li>Code...</li>
-                    </ul>
-                </div>
-                <div class="d-flex col flex-column my-auto justify-content-center align-items-center"
-                    style="height: 50%">
-                    <h1>Completed</h1>
-                    <ul id="completedTodoList">
-                        <li>Write Code</li>
-                        <li>Code...</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </header>
 
-    <!--Import Java Script-->
-    <script src="js/script.js"></script>
+    <section class="card-deck text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header bg-transparent">
+                <h2>WHAT I WANT TO DO</h2>
+                <a href="" class="hearticons"><i class=" fa fa-heart"> </i> <i class=" fa fa-heart"></i>
+                    <i class=" fa fa-heart"> </i></a>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <ul class="card-text font-weight-bold mb-auto" style='list-style: none;' id="UserTodoList"></ul>
+            </div>
+            <!-- <div class="card-footer"><a class="btn btn-lg btn-danger btn-block" href="checkout.html">Check out</a> -->
+        </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header bg-transparent">
+                <h2>WHAT I CAN DO</h2>
+                <a href="" class="hearticons"><i class=" fa fa-heart"> </i> <i class=" fa fa-heart"></i></a>
+
+            </div>
+            <div class="card-body d-flex flex-column">
+            </div>
+        </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header bg-transparent">
+                <h2>WHAT I NEED TO DO</h2>
+                <a href="" class="hearticons"><i class=" fa fa-heart"> </i> </a>
+
+            </div>
+            <div class="card-body d-flex flex-column">
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header bg-transparent">
+                <h2>DONE</h2>
+                <a href="" class="hearticons"><i class=" fa fa-heart"> </i> <i class=" fa fa-heart"></i>
+                    <i class=" fa fa-heart"> </i></a>
+
+            </div>
+            <div class="card-body d-flex flex-column">
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer font-small special-color-dark">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-6 mb-4">
+
+                    <!-- Form -->
+                    <form class="form-inline">
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                            aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </form>
+                </div>
+                <div class="col-md-6 mb-4">
+
+                    <form class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Your email"
+                            aria-label="Your email" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-sm ml-md-2 btn-block text-white font-weight-bold" type="button"
+                                class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off"
+                                style="background:#F2A900">Sign up </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> Anhanh.com</a>
+        </div>
+    </footer>
 
     <!--bootstrap script-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -76,7 +132,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <!--Import Java Script-->
+    <script src="js/script.js"></script>
+
 
 </body>
 
 </html>
+
+<!-- 
+                <h3 class="card-title">Web Design Bootcamp</h3>
+                <p class="card-text font-weight-bold mb-auto">5 weeks, 7-9PM Tu/Th, starts April 17th</p>
+                <ul class="list-unstyled my-4">
+                    <li>Build portfolio from scratch</li>
+                    <li>Responsive with Bootstrap</li>
+                    <li>Customize with Wordpress</li>
+                    <li>Mentoring support</li>
+                </ul>
+                <h3>4.9M VND
+                    <small class="text-muted">/ course</small>
+                </h3> -->
