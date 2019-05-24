@@ -31,7 +31,7 @@
         <h1 class="text-uppercase" style="font-family: Oswald;">LIFE IS
             <span style="color: #F2A900;">SHORT</span></h1>
         <h2 id="titleContainer" onclick="ChangeTitle()">User's Todo List</h2>
-        <!-- Coded with love by Mutiullah Samim, modified with love by me. Thank you so much!!!-->
+        <!-- Coded with love by Mutiullah Samim-->
         <div class="container h-100">
             <div class="d-flex justify-content-center h-100">
                 <div class="searchbar">
@@ -40,10 +40,11 @@
                 </div>
             </div>
         </div>
+        <!-- modified with love by me. Thank you so much!!! -->
     </header>
 
-    <section class="card-deck text-center">
-        <div class="card mb-4 box-shadow">
+    <section class="card-deck text-center mx-5">
+        <div class="card mb-4 box-shadow pl-sm-0">
             <div class="card-header bg-transparent">
                 <h2>WHAT I WANT TO DO</h2>
                 <a href="" class="hearticons"><i class=" fa fa-heart"> </i> <i class=" fa fa-heart"></i>
@@ -54,6 +55,8 @@
             </div>
             <!-- <div class="card-footer"><a class="btn btn-lg btn-danger btn-block" href="checkout.html">Check out</a> -->
         </div>
+        <div class="w-100 d-none d-sm-block d-md-none">
+            <!-- wrap every 1 on sm-->
         </div>
         <div class="card mb-4 box-shadow">
             <div class="card-header bg-transparent">
@@ -64,6 +67,8 @@
             <div class="card-body d-flex flex-column">
             </div>
         </div>
+        <div class="w-100 d-none d-md-block d-lg-none">
+            <!-- wrap every 2 on md-->
         </div>
         <div class="card mb-4 box-shadow">
             <div class="card-header bg-transparent">
@@ -74,6 +79,13 @@
             <div class="card-body d-flex flex-column">
             </div>
         </div>
+                <div class="w-100 d-none d-sm-block d-md-none">
+                    <!-- wrap every 2 on sm-->
+                </div>
+                <div class="w-100 d-none d-lg-block d-xl-none">
+                    <!-- wrap every 4 on lg-->
+                </div>
+
         <div class="card mb-4 box-shadow">
             <div class="card-header bg-transparent">
                 <h2>DONE</h2>
@@ -85,43 +97,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="page-footer font-small special-color-dark">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-6 mb-4">
-
-                    <!-- Form -->
-                    <form class="form-inline">
-                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                            aria-label="Search">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </form>
-                </div>
-                <div class="col-md-6 mb-4">
-
-                    <form class="input-group">
-                        <input type="text" class="form-control form-control-sm" placeholder="Your email"
-                            aria-label="Your email" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-sm ml-md-2 btn-block text-white font-weight-bold" type="button"
-                                class="btn btn-warning" data-toggle="button" aria-pressed="false" autocomplete="off"
-                                style="background:#F2A900">Sign up </button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> Anhanh.com</a>
-        </div>
-    </footer>
-
     <!--bootstrap script-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -139,16 +114,3 @@
 </body>
 
 </html>
-
-<!-- 
-                <h3 class="card-title">Web Design Bootcamp</h3>
-                <p class="card-text font-weight-bold mb-auto">5 weeks, 7-9PM Tu/Th, starts April 17th</p>
-                <ul class="list-unstyled my-4">
-                    <li>Build portfolio from scratch</li>
-                    <li>Responsive with Bootstrap</li>
-                    <li>Customize with Wordpress</li>
-                    <li>Mentoring support</li>
-                </ul>
-                <h3>4.9M VND
-                    <small class="text-muted">/ course</small>
-                </h3> -->
