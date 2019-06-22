@@ -2,7 +2,7 @@
 
 Created with love by: Anh Nguyen
   
-View online at: <a href="https://albertanguyen.github.io/TodoList.github.io/">https://albertanguyen.github.io/TodoList.github.io/</a>. 
+View online at: <a href="https://albertanguyen.github.io/TodoList.github.io/" target="_blank">https://albertanguyen.github.io/TodoList.github.io/</a>. 
   
 [//]: # (One or two sentence summary of your project.)
 
@@ -37,10 +37,14 @@ THE USER is
 
 ## Time Spent and Lessons Learned
 
-Roughly 15h for my first realease, I reviewed about Event Handler, DOM elements (nodes), applied object data and data sorting
+It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM elements (nodes), applied object data and data sorting. Again, confirm my understanding on how html, css, javascript communicate to each other
+<img src="https://github.com/albertanguyen/TodoList.github.io/blob/master/img/web-development-butt-analogy.png" width="500" align="center">
+*All right reserved to http://devhumor.com/*
+
 
 ## Describe any challenges encountered while building the app.
-how to handle object datatype, how to toggle between JS nodes and html nodes
+* Handling object datatype, 
+* Toggling between JS nodes and html nodes
 
 [//]: # (## Version 1.0.2)
 [//]: # (May 2019 Added drag and drop feature)
