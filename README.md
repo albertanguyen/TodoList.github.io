@@ -43,8 +43,6 @@ It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM 
 (*All right reserved to <a href="http://devhumor.com/" target="_blank">devhumor.com</a>*)
 </p>
 
-
-
 ## Describe any challenges encountered while building the app.
 * Handling object datatype, 
 * Toggling between JS nodes and html nodes
@@ -56,7 +54,7 @@ It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM 
 Created new html template
 
 ## Version 1.0.0
-Adapted from the live demo from <a href="https://github.com/PrimeTimeTran/todoList" target="_blank">Mr. Loi</a>
+Adapted from the <a href="https://www.youtube.com/watch?v=xUbfP6laz8g&feature=youtu.be" target="_blank">live demo</a> from Mr. Loi.
 
 ## License
 
