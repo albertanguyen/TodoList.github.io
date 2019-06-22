@@ -53,6 +53,44 @@ const ChangeTitle = () => {
     });
 };
 
+/* Capture mouse's movement*/
+
+document.onmousemove = mouseMove; 
+function mouseMove(ev){
+  ev = ev || window.event; 
+  var mousePos = mouseCoords(ev);
+} 
+
+function mouseCoords(ev){
+  if(ev.pageX || ev.pageY) {
+    return {x:ev.pageX, y:ev.pageY};
+  }
+  return {
+    x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+    y:ev.clientY + document.body.scrollTop  - document.body.clientTop
+  };}
+
+document.onmouseup = mouseUp;
+var dragObject     = null; 
+function makeClickable(object) {
+  object.onmousedown = function() {
+    dragObject = this;
+  } 
+} 
+
+function mouseUp(ev){
+  dragObject = null; 
+}
+
+function makeDraggable(item){
+  if(!item) return;
+  item.onmousedown = function(ev) {
+    dragObject  = this;
+    mouseOffset = getMouseOffset(this, ev);
+    return false;
+  } 
+} 
+
 
 const main = () => {
   clearOldTodoLists();
