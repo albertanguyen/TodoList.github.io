@@ -51,7 +51,7 @@ It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM 
 [//]: # (May 2019 Added drag and drop feature)
 
 ## Version 1.0.1
-Created new html template
+Created new html, css template
 
 ## Version 1.0.0
 Adapted from the <a href="https://www.youtube.com/watch?v=xUbfP6laz8g&feature=youtu.be" target="_blank">live demo</a> from Mr. Loi.
