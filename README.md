@@ -40,9 +40,9 @@ THE USER is
 It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM elements (nodes), applied object data and data sorting. Again, confirm my understanding on how html, css, javascript communicate to each other
 <p align="center">
 <img src="https://github.com/albertanguyen/TodoList.github.io/blob/master/img/web-development-butt-analogy.png" width="500" />
+(*All right reserved to <a href="http://devhumor.com/" target="_blank">devhumor.com</a>*)
 </p>
 
-*All right reserved to <a href="http://devhumor.com/" target="_blank">devhumor.com</a>*
 
 
 ## Describe any challenges encountered while building the app.
