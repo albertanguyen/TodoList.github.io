@@ -42,7 +42,7 @@ It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM 
 <img src="https://github.com/albertanguyen/TodoList.github.io/blob/master/img/web-development-butt-analogy.png" width="500" />
 </p>
 
-*All right reserved to http://devhumor.com/*
+*All right reserved to <a href="http://devhumor.com/" target="_blank">devhumor.com</a>*
 
 
 ## Describe any challenges encountered while building the app.
@@ -56,7 +56,7 @@ It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM 
 Created new html template
 
 ## Version 1.0.0
-Adapted from the live demo of java script from Mr. Loi
+Adapted from the live demo from <a href="https://github.com/PrimeTimeTran/todoList" target="_blank">Mr. Loi</a>
 
 ## License
 
