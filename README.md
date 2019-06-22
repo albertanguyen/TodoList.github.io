@@ -38,7 +38,10 @@ THE USER is
 ## Time Spent and Lessons Learned
 
 It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM elements (nodes), applied object data and data sorting. Again, confirm my understanding on how html, css, javascript communicate to each other
-<img src="https://github.com/albertanguyen/TodoList.github.io/blob/master/img/web-development-butt-analogy.png" width="500" align="center">
+<p align="center">
+<img src="https://github.com/albertanguyen/TodoList.github.io/blob/master/img/web-development-butt-analogy.png" width="500" />
+</p>
+
 *All right reserved to http://devhumor.com/*
 
 
