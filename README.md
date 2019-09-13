@@ -40,10 +40,8 @@ THE USER is
 It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM elements (nodes), applied object data and data sorting. Again, confirm my understanding on how html, css, javascript communicate to each other
 <p align="center">
 <img src="https://github.com/albertanguyen/TodoList.github.io/blob/master/img/web-development-butt-analogy.png" width="500" />
+(*All right reserved to <a href="http://devhumor.com/" target="_blank">devhumor.com</a>*)
 </p>
-
-*All right reserved to <a href="http://devhumor.com/" target="_blank">devhumor.com</a>*
-
 
 ## Describe any challenges encountered while building the app.
 * Handling object datatype, 
@@ -53,10 +51,10 @@ It takes roughly 15h for my first realease, I reviewed about Event Handler, DOM 
 [//]: # (May 2019 Added drag and drop feature)
 
 ## Version 1.0.1
-Created new html template
+Created new html, css template
 
 ## Version 1.0.0
-Adapted from the live demo from <a href="https://github.com/PrimeTimeTran/todoList" target="_blank">Mr. Loi</a>
+Adapted from the <a href="https://www.youtube.com/watch?v=xUbfP6laz8g&feature=youtu.be" target="_blank">live demo</a> from Mr. Loi.
 
 ## License
 
